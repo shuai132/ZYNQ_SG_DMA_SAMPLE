@@ -56,9 +56,9 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_ad9280_sample_0_0/src/afifo/sim/afifo.v" \
-  "../../../bd/design_1/ipshared/1206/src/ad9280_sample.v" \
-  "../../../bd/design_1/ipshared/1206/hdl/ad9280_sample_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/1206/hdl/ad9280_sample_v1_0.v" \
+  "../../../bd/design_1/ipshared/bc12/src/ad9280_sample.v" \
+  "../../../bd/design_1/ipshared/bc12/hdl/ad9280_sample_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/bc12/hdl/ad9280_sample_v1_0.v" \
   "../../../bd/design_1/ip/design_1_ad9280_sample_0_0/sim/design_1_ad9280_sample_0_0.v" \
 -endlib
 -makelib ies_lib/axis_infrastructure_v1_1_0 \

@@ -139,15 +139,16 @@ begin
 			begin
 				if(adc_data_valid == 1'b1)
 				begin
-					if(sample_cnt == sample_len_d2)
+//					if(sample_cnt == sample_len_d2)
+//					begin
+//						sample_cnt <= 32'd0;
+//						adc_buf_wr  <= 1'b0 ;
+//						state <= S_IDLE;
+//					end
+//					else
 					begin
-						sample_cnt <= 32'd0;
-						adc_buf_wr  <= 1'b0 ;
-						state <= S_IDLE;
-					end
-					else
-					begin
-					    adc_buf_data <= adc_data ; 
+//					    adc_buf_data <= adc_data ; 
+                        adc_buf_data <= adc_buf_data + 1'b1;    // test data lost
 					    adc_buf_wr  <= 1'b1 ;
 						sample_cnt <= sample_cnt + 32'd1;
 					end

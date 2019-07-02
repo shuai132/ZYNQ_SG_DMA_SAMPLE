@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:ad9280_sample:1.0
-// IP Revision: 15
+// IP Revision: 17
 
 (* X_CORE_INFO = "ad9280_sample_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_ad9280_sample_0_0,ad9280_sample_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_ad9280_sample_0_0,ad9280_sample_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ad9280_sample,x_ipVersion=1.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "design_1_ad9280_sample_0_0,ad9280_sample_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ad9280_sample,x_ipVersion=1.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_ad9280_sample_0_0 (
   adc_clk,
