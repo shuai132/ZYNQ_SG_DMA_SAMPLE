@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]F:\intel_project\AX7021_SDK_UPDATE\course_s2_sdk\24_ad9280_lwip\ad9280_lwip.sdk\fsbl\Debug\fsbl.elf
+	F:\intel_project\AX7021_SDK_UPDATE\course_s2_sdk\24_ad9280_lwip\ad9280_lwip.sdk\design_1_wrapper_hw_platform_0\design_1_wrapper.bit
+	F:\intel_project\AX7021_SDK_UPDATE\course_s2_sdk\24_ad9280_lwip\ad9280_lwip.sdk\ad_lwip\Debug\ad_lwip.elf
+}

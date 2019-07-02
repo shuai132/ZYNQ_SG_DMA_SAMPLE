@@ -1,0 +1,9 @@
+.idea/
+.DS_Store
+cmake-build-*/
+
+/*.cache/
+/*.runs/
+/*.tmp/
+
+*.log
