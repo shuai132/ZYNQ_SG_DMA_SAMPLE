@@ -67,10 +67,25 @@ int main()
 
 			const uint8_t *data = (uint8_t *)DmaRxBuffer;
 		    printf("Got adc: len:%d, data:\n", ADC_SAMPLE_NUM);
+		    uint8_t last_v;
+		    int is_first = 1;
+
 		    for (int i=0; i<ADC_SAMPLE_NUM; i++) {
-		        printf("%2x ", data[i]);
+		    	uint8_t v = data[i];
+		        printf("%2x ", v);
 		        if ((i+1)%10 == 0) printf("\n");
+
+		        if(!is_first) {
+		        	if (last_v != (uint8_t)(v - 1)) {
+		        		printf("*****************************Check error!!! data lost!!! now pos:%d\n", i);
+		        		//break;
+		        	}
+		        } else {
+		        	is_first = 0;
+		        }
+		        last_v = v;
 		    }
+		    printf("\n");
 
 			/* Start ADC channel 0 */
 			XAxiDma_Adc(BdChainBuffer, AD9280_BASE, ADC_SAMPLE_NUM, BD_COUNT, &AxiDma) ;

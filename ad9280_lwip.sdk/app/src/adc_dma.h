@@ -33,7 +33,7 @@
 #define BD_COUNT         4
 
 
-#define ADC_SAMPLE_NUM  128
+#define ADC_SAMPLE_NUM  256 * 10
 
 
 extern volatile int s2mm_flag;
