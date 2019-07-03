@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Wed Jul  3 05:12:53 2019
+// Date        : Wed Jul  3 23:18:43 2019
 // Host        : localhost running 64-bit Ubuntu 18.04.2 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/parallels/nfs/zynq_proj/25_ad9280_lwip/ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_ad9280_sample_0_0/design_1_ad9280_sample_0_0_sim_netlist.v
@@ -267,11 +267,12 @@ module design_1_ad9280_sample_0_0_ad9280_sample
   wire \FSM_onehot_state[2]_i_8_n_0 ;
   wire \FSM_onehot_state[2]_i_9_n_0 ;
   wire [0:0]Q;
+  wire adc_buf_data;
   wire \adc_buf_data[7]_i_2_n_0 ;
   wire [7:0]adc_buf_data_reg;
   wire adc_buf_rd;
   wire adc_buf_rd_d0;
-  wire adc_buf_wr_reg_n_0;
+  wire adc_buf_wr;
   wire adc_clk;
   wire adc_rst_n;
   wire afifo_inst_i_1_n_0;
@@ -362,7 +363,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
   wire sample_start_d2;
   wire st_clr;
   wire st_clr_i_1_n_0;
-  wire [2:0]state__0;
+  wire [0:0]state__0;
   wire tvalid_en;
   wire tvalid_en_i_1_n_0;
   wire [31:0]wait_cnt;
@@ -767,12 +768,12 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(wait_cnt_0),
         .I3(\FSM_onehot_state[2]_i_5_n_0 ),
         .I4(\FSM_onehot_state[2]_i_6_n_0 ),
-        .I5(state__0[0]),
+        .I5(state__0),
         .O(\FSM_onehot_state[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFF88FA88FF88FF88)) 
     \FSM_onehot_state[1]_i_1 
-       (.I0(state__0[0]),
+       (.I0(state__0),
         .I1(sample_start_d2),
         .I2(\FSM_onehot_state[2]_i_4_n_0 ),
         .I3(wait_cnt_0),
@@ -787,7 +788,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(wait_cnt_0),
         .I3(\FSM_onehot_state[2]_i_5_n_0 ),
         .I4(\FSM_onehot_state[2]_i_6_n_0 ),
-        .I5(state__0[2]),
+        .I5(adc_buf_data),
         .O(\FSM_onehot_state[2]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
@@ -825,7 +826,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
     .INIT(4'h8)) 
     \FSM_onehot_state[2]_i_3 
        (.I0(sample_start_d2),
-        .I1(state__0[0]),
+        .I1(state__0),
         .O(\FSM_onehot_state[2]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hFFEFFFFF)) 
@@ -884,7 +885,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .CE(1'b1),
         .D(\FSM_onehot_state[0]_i_1_n_0 ),
         .PRE(\FSM_onehot_state[2]_i_2_n_0 ),
-        .Q(state__0[0]));
+        .Q(state__0));
   (* FSM_ENCODED_STATES = "S_IDLE:001,S_SAMP_WAIT:010,S_SAMPLE:100," *) 
   FDCE #(
     .INIT(1'b0)) 
@@ -902,7 +903,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .CE(1'b1),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(\FSM_onehot_state[2]_i_1_n_0 ),
-        .Q(state__0[2]));
+        .Q(adc_buf_data));
   LUT1 #(
     .INIT(2'h1)) 
     \adc_buf_data[0]_i_1 
@@ -979,49 +980,49 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .O(\adc_buf_data[7]_i_2_n_0 ));
   FDCE \adc_buf_data_reg[0] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[0]),
         .Q(adc_buf_data_reg[0]));
   FDCE \adc_buf_data_reg[1] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[1]),
         .Q(adc_buf_data_reg[1]));
   FDCE \adc_buf_data_reg[2] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[2]),
         .Q(adc_buf_data_reg[2]));
   FDCE \adc_buf_data_reg[3] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[3]),
         .Q(adc_buf_data_reg[3]));
   FDCE \adc_buf_data_reg[4] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[4]),
         .Q(adc_buf_data_reg[4]));
   FDCE \adc_buf_data_reg[5] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[5]),
         .Q(adc_buf_data_reg[5]));
   FDCE \adc_buf_data_reg[6] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[6]),
         .Q(adc_buf_data_reg[6]));
   FDCE \adc_buf_data_reg[7] 
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(p_0_in__0[7]),
         .Q(adc_buf_data_reg[7]));
@@ -1033,10 +1034,10 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .Q(adc_buf_rd_d0));
   FDCE adc_buf_wr_reg
        (.C(adc_clk),
-        .CE(state__0[2]),
+        .CE(adc_buf_data),
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(1'b1),
-        .Q(adc_buf_wr_reg_n_0));
+        .Q(adc_buf_wr));
   (* CHECK_LICENSE_TYPE = "afifo,fifo_generator_v13_2_4,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
   (* x_core_info = "fifo_generator_v13_2_4,Vivado 2019.1" *) 
@@ -1051,7 +1052,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .rst(afifo_inst_i_1_n_0),
         .wr_clk(adc_clk),
         .wr_data_count(NLW_afifo_inst_wr_data_count_UNCONNECTED[9:0]),
-        .wr_en(adc_buf_wr_reg_n_0));
+        .wr_en(adc_buf_wr));
   LUT1 #(
     .INIT(2'h1)) 
     afifo_inst_i_1
@@ -2426,7 +2427,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
     .INIT(16'hD5C0)) 
     st_clr_i_1
        (.I0(wait_cnt_0),
-        .I1(state__0[0]),
+        .I1(state__0),
         .I2(sample_start_d2),
         .I3(st_clr),
         .O(st_clr_i_1_n_0));

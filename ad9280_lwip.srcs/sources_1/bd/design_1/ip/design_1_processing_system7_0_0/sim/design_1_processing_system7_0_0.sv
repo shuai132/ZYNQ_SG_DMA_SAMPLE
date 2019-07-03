@@ -853,7 +853,7 @@
       parameter C_FCLK_CLK1_BUF = "TRUE";
       parameter C_FCLK_CLK2_BUF = "TRUE";
       parameter C_FCLK_CLK3_BUF = "FALSE";
-      parameter C_PACKAGE_NAME = "clg485";
+      parameter C_PACKAGE_NAME = "clg484";
       parameter C_GP0_EN_MODIFIABLE_TXN = "1";
       parameter C_GP1_EN_MODIFIABLE_TXN = "1";
 

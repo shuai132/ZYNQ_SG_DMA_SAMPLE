@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Wed Jul  3 05:12:53 2019
+-- Date        : Wed Jul  3 23:18:44 2019
 -- Host        : localhost running 64-bit Ubuntu 18.04.2 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/parallels/nfs/zynq_proj/25_ad9280_lwip/ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_ad9280_sample_0_0/design_1_ad9280_sample_0_0_sim_netlist.vhdl
@@ -7120,11 +7120,12 @@ architecture STRUCTURE of design_1_ad9280_sample_0_0_ad9280_sample is
   signal \FSM_onehot_state[2]_i_7_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[2]_i_8_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[2]_i_9_n_0\ : STD_LOGIC;
+  signal adc_buf_data : STD_LOGIC;
   signal \adc_buf_data[7]_i_2_n_0\ : STD_LOGIC;
   signal adc_buf_data_reg : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal adc_buf_rd : STD_LOGIC;
   signal adc_buf_rd_d0 : STD_LOGIC;
-  signal adc_buf_wr_reg_n_0 : STD_LOGIC;
+  signal adc_buf_wr : STD_LOGIC;
   signal afifo_inst_i_1_n_0 : STD_LOGIC;
   signal data0 : STD_LOGIC_VECTOR ( 31 downto 1 );
   signal dma_cnt : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -7206,7 +7207,7 @@ architecture STRUCTURE of design_1_ad9280_sample_0_0_ad9280_sample is
   signal sample_start_d2 : STD_LOGIC;
   signal \^st_clr\ : STD_LOGIC;
   signal st_clr_i_1_n_0 : STD_LOGIC;
-  signal \state__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \state__0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal tvalid_en : STD_LOGIC;
   signal tvalid_en_i_1_n_0 : STD_LOGIC;
   signal wait_cnt : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -7914,7 +7915,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
       I2 => wait_cnt_0,
       I3 => \FSM_onehot_state[2]_i_5_n_0\,
       I4 => \FSM_onehot_state[2]_i_6_n_0\,
-      I5 => \state__0\(2),
+      I5 => adc_buf_data,
       O => \FSM_onehot_state[2]_i_1_n_0\
     );
 \FSM_onehot_state[2]_i_10\: unisim.vcomponents.LUT4
@@ -8066,7 +8067,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
       CE => '1',
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \FSM_onehot_state[2]_i_1_n_0\,
-      Q => \state__0\(2)
+      Q => adc_buf_data
     );
 \adc_buf_data[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -8166,7 +8167,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(0),
       Q => adc_buf_data_reg(0)
@@ -8174,7 +8175,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(1),
       Q => adc_buf_data_reg(1)
@@ -8182,7 +8183,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(2),
       Q => adc_buf_data_reg(2)
@@ -8190,7 +8191,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(3),
       Q => adc_buf_data_reg(3)
@@ -8198,7 +8199,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[4]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(4),
       Q => adc_buf_data_reg(4)
@@ -8206,7 +8207,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[5]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(5),
       Q => adc_buf_data_reg(5)
@@ -8214,7 +8215,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[6]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(6),
       Q => adc_buf_data_reg(6)
@@ -8222,7 +8223,7 @@ DMA_AXIS_tvalid: unisim.vcomponents.LUT3
 \adc_buf_data_reg[7]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => \p_0_in__0\(7),
       Q => adc_buf_data_reg(7)
@@ -8238,10 +8239,10 @@ adc_buf_rd_d0_reg: unisim.vcomponents.FDCE
 adc_buf_wr_reg: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => \state__0\(2),
+      CE => adc_buf_data,
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => '1',
-      Q => adc_buf_wr_reg_n_0
+      Q => adc_buf_wr
     );
 afifo_inst: entity work.design_1_ad9280_sample_0_0_afifo
      port map (
@@ -8255,7 +8256,7 @@ afifo_inst: entity work.design_1_ad9280_sample_0_0_afifo
       rst => afifo_inst_i_1_n_0,
       wr_clk => adc_clk,
       wr_data_count(9 downto 0) => NLW_afifo_inst_wr_data_count_UNCONNECTED(9 downto 0),
-      wr_en => adc_buf_wr_reg_n_0
+      wr_en => adc_buf_wr
     );
 afifo_inst_i_1: unisim.vcomponents.LUT1
     generic map(

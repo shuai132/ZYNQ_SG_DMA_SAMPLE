@@ -113,9 +113,9 @@ vlog -work fifo_generator_v13_2_4 -64 "+incdir+../../../../ad9280_lwip.srcs/sour
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+/home/parallels/Software/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_ad9280_sample_0_0/src/afifo/sim/afifo.v" \
-"../../../bd/design_1/ipshared/bc12/src/ad9280_sample.v" \
-"../../../bd/design_1/ipshared/bc12/hdl/ad9280_sample_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/bc12/hdl/ad9280_sample_v1_0.v" \
+"../../../bd/design_1/ipshared/6a9e/src/ad9280_sample.v" \
+"../../../bd/design_1/ipshared/6a9e/hdl/ad9280_sample_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/6a9e/hdl/ad9280_sample_v1_0.v" \
 "../../../bd/design_1/ip/design_1_ad9280_sample_0_0/sim/design_1_ad9280_sample_0_0.v" \
 
 vlog -work axis_infrastructure_v1_1_0 -64 "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+/home/parallels/Software/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \

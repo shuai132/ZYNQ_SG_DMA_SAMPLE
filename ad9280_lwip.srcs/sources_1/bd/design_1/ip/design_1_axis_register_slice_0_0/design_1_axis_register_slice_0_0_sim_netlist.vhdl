@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Tue Jul  2 22:52:58 2019
+-- Date        : Tue Jul  2 22:52:57 2019
 -- Host        : localhost running 64-bit Ubuntu 18.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/parallels/nfs/zynq_proj/25_ad9280_lwip/ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_axis_register_slice_0_0/design_1_axis_register_slice_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axis_register_slice_0_0 -prefix
+--               design_1_axis_register_slice_0_0_ design_1_axis_register_slice_0_0_sim_netlist.vhdl
 -- Design      : design_1_axis_register_slice_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axisc_regist
     s_axis_tvalid : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axisc_register_slice : entity is "axis_register_slice_v1_1_19_axisc_register_slice";
 end design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axisc_register_slice;
 
 architecture STRUCTURE of design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axisc_register_slice is
@@ -528,8 +526,6 @@ entity design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axis_registe
   attribute G_TASK_SEVERITY_INFO of design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axis_register_slice : entity is 0;
   attribute G_TASK_SEVERITY_WARNING : integer;
   attribute G_TASK_SEVERITY_WARNING of design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axis_register_slice : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axis_register_slice : entity is "axis_register_slice_v1_1_19_axis_register_slice";
   attribute P_TPAYLOAD_WIDTH : integer;
   attribute P_TPAYLOAD_WIDTH of design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axis_register_slice : entity is 10;
 end design_1_axis_register_slice_0_0_axis_register_slice_v1_1_19_axis_register_slice;

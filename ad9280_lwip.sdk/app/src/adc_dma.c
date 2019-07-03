@@ -8,7 +8,11 @@ void XAxiDma_Adc(u32 *BdChainBuffer, u32 adc_addr, u32 adc_len, u16 BdCount, XAx
 	/* Clear BD Status */
 	Bd_StatusClr(BdChainBuffer, BdCount) ;
 	/* Start sample */
-	ad9280_sample(adc_addr, adc_len)  ;
+	static int first = TRUE;
+	if (first) {
+		first = FALSE;
+		ad9280_sample(adc_addr, adc_len);
+	}
 	/* start DMA translation from ADC channel 0 to DDR3 */
 	Bd_Start(BdChainBuffer, BdCount, AxiDma, RXPATH) ;
 }
@@ -60,7 +64,7 @@ void Dma_Interrupt_Handler(void *CallBackRef)
 	XAxiDmaPtr = (XAxiDma *) CallBackRef ;
 
 	int  s2mm_sr = XAxiDma_IntrGetIrq(XAxiDmaPtr, XAXIDMA_DEVICE_TO_DMA) ;
-	xil_printf("Interrupt Value is 0x%x\r\n", s2mm_sr) ;
+	//xil_printf("Interrupt Value is 0x%x\r\n", s2mm_sr) ;
 
 	if (s2mm_sr & XAXIDMA_IRQ_IOC_MASK)
 	{

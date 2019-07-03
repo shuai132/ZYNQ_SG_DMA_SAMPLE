@@ -31,11 +31,11 @@ module ad9280_sample(
     input                       adc_rst_n,
 	input[7:0]                  adc_data,
 	input                       adc_data_valid,
-	
+
 	input  [31:0]               sample_len,
 	input                       sample_start,
 	output reg                  st_clr,
-	
+
     output [7:0]                DMA_AXIS_tdata,
     output [0:0]                DMA_AXIS_tkeep,
     output                      DMA_AXIS_tlast,
@@ -89,8 +89,8 @@ begin
 		sample_len_d0   <= 32'd0 ;
 		sample_len_d1   <= 32'd0 ;
 		sample_len_d2   <= 32'd0 ;
-	end	
-	else 
+	end
+	else
 	begin
          sample_start_d0 <= sample_start;
          sample_start_d1 <= sample_start_d0;
@@ -98,7 +98,7 @@ begin
          sample_len_d0   <= sample_len ;
          sample_len_d1   <= sample_len_d0 ;
          sample_len_d2   <= sample_len_d1 ;
-     end    
+     end
 end
 
 always@(posedge adc_clk or negedge adc_rst_n)
@@ -120,7 +120,7 @@ begin
 			  begin
 				state  <= S_SAMP_WAIT ;
 				st_clr <= 1'b1 ;
-			  end		    
+			  end
 			end
 			S_SAMP_WAIT :
 			begin
@@ -137,23 +137,23 @@ begin
 			end
 			S_SAMPLE:
 			begin
-				if(adc_data_valid == 1'b1)
+				if(1)
 				begin
-//					if(sample_cnt == sample_len_d2)
-//					begin
-//						sample_cnt <= 32'd0;
-//						adc_buf_wr  <= 1'b0 ;
-//						state <= S_IDLE;
-//					end
-//					else
+					if(0)
 					begin
-//					    adc_buf_data <= adc_data ; 
+						sample_cnt <= 32'd0;
+						adc_buf_wr  <= 1'b0 ;
+						state <= S_IDLE;
+					end
+					else
+					begin
+//					    adc_buf_data <= adc_data ;
                         adc_buf_data <= adc_buf_data + 1'b1;    // test data lost
 					    adc_buf_wr  <= 1'b1 ;
 						sample_cnt <= sample_cnt + 32'd1;
 					end
 				end
-			end		
+			end
 			default:
 				state <= S_IDLE;
 		endcase
@@ -170,10 +170,10 @@ afifo afifo_inst
   .wr_en              (adc_buf_wr     ),
   .rd_en              (adc_buf_rd     ),
   .dout               (DMA_AXIS_tdata      ),
-  .full               (          ), 
+  .full               (          ),
   .empty              (empty         ),
   .rd_data_count      (rd_data_count  ),
-  .wr_data_count      (          ) 
+  .wr_data_count      (          )
 
 ) ;
 
@@ -184,7 +184,7 @@ always@(posedge DMA_CLK or negedge DMA_RST_N)
 begin
 	if(DMA_RST_N == 1'b0)
 		adc_buf_rd_d0 <= 1'b0;
-	else 
+	else
 	    adc_buf_rd_d0 <= adc_buf_rd ;
 end
 
@@ -205,13 +205,13 @@ begin
 		dma_len_d0   <= 32'd0 ;
 		dma_len_d1   <= 32'd0 ;
 		dma_len_d2   <= 32'd0 ;
-	end	
-	else 
+	end
+	else
 	begin
          dma_len_d0   <= sample_len ;
          dma_len_d1   <= dma_len_d0 ;
          dma_len_d2   <= dma_len_d1 ;
-     end    
+     end
 end
 
 

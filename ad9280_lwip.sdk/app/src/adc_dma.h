@@ -23,7 +23,7 @@
 #define AD9280_START       AD9280_SAMPLE_S00_AXI_SLV_REG0_OFFSET
 #define AD9280_LENGTH      AD9280_SAMPLE_S00_AXI_SLV_REG1_OFFSET
 
-#define ADC_BYTE           2              /* ADC data byte number */
+#define ADC_BYTE           1              /* ADC data byte number */
 #define ADC_BITS           8
 
 
@@ -33,7 +33,7 @@
 #define BD_COUNT         4
 
 
-#define ADC_SAMPLE_NUM  256 * 10
+#define ADC_SAMPLE_NUM  (1024 * 1024 * BD_COUNT)
 
 
 extern volatile int s2mm_flag;
