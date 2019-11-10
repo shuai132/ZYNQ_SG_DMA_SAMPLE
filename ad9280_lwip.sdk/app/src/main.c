@@ -57,7 +57,7 @@ int main()
 	XAxiDma_Adc(BdChainBuffer, AD9280_BASE, ADC_SAMPLE_NUM, BD_COUNT, &AxiDma) ;
     while (1) {
     	/* Wait for times */
-		usleep(1000 * 100) ;
+		sleep(1);
 
 		/* Check if DMA completed */
 		if (s2mm_flag) {
@@ -71,6 +71,7 @@ int main()
 		        printf("%2x ", data[i]);
 		        if ((i+1)%10 == 0) printf("\n");
 		    }
+		    printf("\n");
 
 			/* Start ADC channel 0 */
 			XAxiDma_Adc(BdChainBuffer, AD9280_BASE, ADC_SAMPLE_NUM, BD_COUNT, &AxiDma) ;
