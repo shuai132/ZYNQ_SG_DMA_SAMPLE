@@ -443,7 +443,7 @@
 
 	// Add user logic here
 
-ad9280_sample sample_inst(
+AXI_DMA_LTC2324_16 sample_inst(
     .adc_clk              (adc_clk        ),
     .adc_rst_n            (adc_rst_n      ),
     

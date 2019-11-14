@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Thu Nov 14 17:51:51 2019
+//Date        : Thu Nov 14 18:53:18 2019
 //Host        : localhost running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=4,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=1,da_clkrst_cnt=4,da_ps7_cnt=4,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -32,8 +32,13 @@ module design_1
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    adc_clk,
-    adc_data);
+    adc_CLKOUT_0,
+    adc_CNV_0,
+    adc_SCK_0,
+    adc_SDO1_0,
+    adc_SDO2_0,
+    adc_SDO3_0,
+    adc_SDO4_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -55,8 +60,13 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ADC_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ADC_CLK, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK2, FREQ_HZ 32258063, INSERT_VIP 0, PHASE 0.000" *) output adc_clk;
-  input [7:0]adc_data;
+  input adc_CLKOUT_0;
+  output adc_CNV_0;
+  output adc_SCK_0;
+  input adc_SDO1_0;
+  input adc_SDO2_0;
+  input adc_SDO3_0;
+  input adc_SDO4_0;
 
   wire [0:0]ARESETN_1;
   wire [7:0]ad9280_sample_0_M00_AXIS_TDATA;
@@ -64,7 +74,11 @@ module design_1
   wire ad9280_sample_0_M00_AXIS_TLAST;
   wire ad9280_sample_0_M00_AXIS_TREADY;
   wire ad9280_sample_0_M00_AXIS_TVALID;
-  wire [7:0]adc_data_0_1;
+  wire adc_CLKOUT_0_1;
+  wire adc_SDO1_0_1;
+  wire adc_SDO2_0_1;
+  wire adc_SDO3_0_1;
+  wire adc_SDO4_0_1;
   wire [31:0]axi_dma_0_M_AXI_S2MM_AWADDR;
   wire [1:0]axi_dma_0_M_AXI_S2MM_AWBURST;
   wire [3:0]axi_dma_0_M_AXI_S2MM_AWCACHE;
@@ -154,6 +168,8 @@ module design_1
   wire axis_register_slice_0_M_AXIS_TLAST;
   wire axis_register_slice_0_M_AXIS_TREADY;
   wire axis_register_slice_0_M_AXIS_TVALID;
+  wire ltc2324_0_adc_CNV;
+  wire ltc2324_0_adc_SCK;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -258,8 +274,13 @@ module design_1
   wire [0:0]rst_ps7_0_142M_peripheral_aresetn;
   wire [0:0]xlconcat_0_dout;
 
-  assign adc_clk = processing_system7_0_FCLK_CLK2;
-  assign adc_data_0_1 = adc_data[7:0];
+  assign adc_CLKOUT_0_1 = adc_CLKOUT_0;
+  assign adc_CNV_0 = ltc2324_0_adc_CNV;
+  assign adc_SCK_0 = ltc2324_0_adc_SCK;
+  assign adc_SDO1_0_1 = adc_SDO1_0;
+  assign adc_SDO2_0_1 = adc_SDO2_0;
+  assign adc_SDO3_0_1 = adc_SDO3_0;
+  assign adc_SDO4_0_1 = adc_SDO4_0;
   design_1_axi_dma_0_1 axi_dma_0
        (.axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_s2mm_aclk(processing_system7_0_FCLK_CLK1),
@@ -438,11 +459,13 @@ module design_1
         .s_axis_tready(ad9280_sample_0_M00_AXIS_TREADY),
         .s_axis_tvalid(ad9280_sample_0_M00_AXIS_TVALID));
   design_1_ad9280_sample_0_0 ltc2324_0
-       (.adc_CLKOUT(1'b0),
-        .adc_SDO1(1'b0),
-        .adc_SDO2(1'b0),
-        .adc_SDO3(1'b0),
-        .adc_SDO4(1'b0),
+       (.adc_CLKOUT(adc_CLKOUT_0_1),
+        .adc_CNV(ltc2324_0_adc_CNV),
+        .adc_SCK(ltc2324_0_adc_SCK),
+        .adc_SDO1(adc_SDO1_0_1),
+        .adc_SDO2(adc_SDO2_0_1),
+        .adc_SDO3(adc_SDO3_0_1),
+        .adc_SDO4(adc_SDO4_0_1),
         .adc_clk(processing_system7_0_FCLK_CLK2),
         .adc_rst_n(proc_sys_reset_0_peripheral_aresetn),
         .m00_axis_aclk(processing_system7_0_FCLK_CLK1),

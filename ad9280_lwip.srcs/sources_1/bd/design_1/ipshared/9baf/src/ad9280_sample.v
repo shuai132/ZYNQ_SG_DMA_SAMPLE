@@ -1,4 +1,4 @@
-module ad9280_sample(
+module AXI_DMA_LTC2324_16(
     input               adc_clk,
     input               adc_rst_n,
 
@@ -47,6 +47,15 @@ localparam          S_SAMPLE    = 1;
 reg[2:0]            write_cnt;
 localparam          write_num   = 3'd7;
 
+// ADC
+wire                adc_valid;
+wire[15:0]          adc_ch1;
+wire[15:0]          adc_ch2;
+wire[15:0]          adc_ch3;
+wire[15:0]          adc_ch4;
+wire[63:0]          adc_data;
+assign              adc_data = {adc_ch1, adc_ch2, adc_ch3, adc_ch4};
+
 always@(posedge adc_clk or negedge adc_rst_n)
 begin
     if(adc_rst_n == 1'b0)
@@ -82,8 +91,8 @@ begin
             end
             else
             begin
-                // fifo_din <= adc_data;
-                fifo_din   <= write_cnt;    // 模拟
+                // arm是小端模式 这里也把高位字节放到前面 方便解析
+                fifo_din   <= adc_data << write_cnt;
                 fifo_wr_en <= 1'b1;
 
                 if (write_cnt == write_num)
@@ -99,6 +108,28 @@ begin
             state <= S_IDLE;
     endcase
 end
+
+LTC2324_16 LTC2324_16_inst
+(
+    .clk        (adc_clk),
+    .rst_n      (adc_rst_n),
+
+    .CNV        (adc_CNV),
+    .SCK        (adc_SCK),
+    .CLKOUT     (adc_CLKOUT),
+    .SDO1       (adc_SDO1),
+    .SDO2       (adc_SDO2),
+    .SDO3       (adc_SDO3),
+    .SDO4       (adc_SDO4),
+
+    .sample_en  (sample_start),
+
+    .valid      (adc_valid),
+    .ch1        (adc_ch1),
+    .ch2        (adc_ch2),
+    .ch3        (adc_ch3),
+    .ch4        (adc_ch4)
+);
 
 afifo afifo_inst
 (

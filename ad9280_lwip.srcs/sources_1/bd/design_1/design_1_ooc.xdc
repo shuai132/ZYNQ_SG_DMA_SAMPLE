@@ -8,6 +8,6 @@
 ################################################################################
 create_clock -name processing_system7_0_FCLK_CLK0 -period 10 [get_pins processing_system7_0/FCLK_CLK0]
 create_clock -name processing_system7_0_FCLK_CLK1 -period 7 [get_pins processing_system7_0/FCLK_CLK1]
-create_clock -name processing_system7_0_FCLK_CLK2 -period 31 [get_pins processing_system7_0/FCLK_CLK2]
+create_clock -name processing_system7_0_FCLK_CLK2 -period 30 [get_pins processing_system7_0/FCLK_CLK2]
 
 ################################################################################

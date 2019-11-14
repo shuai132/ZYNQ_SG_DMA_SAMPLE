@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Thu Nov 14 17:51:52 2019
+//Date        : Thu Nov 14 18:53:18 2019
 //Host        : localhost running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,8 +31,13 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    adc_clk,
-    adc_data);
+    adc_CLKOUT_0,
+    adc_CNV_0,
+    adc_SCK_0,
+    adc_SDO1_0,
+    adc_SDO2_0,
+    adc_SDO3_0,
+    adc_SDO4_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,8 +59,13 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output adc_clk;
-  input [7:0]adc_data;
+  input adc_CLKOUT_0;
+  output adc_CNV_0;
+  output adc_SCK_0;
+  input adc_SDO1_0;
+  input adc_SDO2_0;
+  input adc_SDO3_0;
+  input adc_SDO4_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -78,8 +88,13 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire adc_clk;
-  wire [7:0]adc_data;
+  wire adc_CLKOUT_0;
+  wire adc_CNV_0;
+  wire adc_SCK_0;
+  wire adc_SDO1_0;
+  wire adc_SDO2_0;
+  wire adc_SDO3_0;
+  wire adc_SDO4_0;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -103,6 +118,11 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .adc_clk(adc_clk),
-        .adc_data(adc_data));
+        .adc_CLKOUT_0(adc_CLKOUT_0),
+        .adc_CNV_0(adc_CNV_0),
+        .adc_SCK_0(adc_SCK_0),
+        .adc_SDO1_0(adc_SDO1_0),
+        .adc_SDO2_0(adc_SDO2_0),
+        .adc_SDO3_0(adc_SDO3_0),
+        .adc_SDO4_0(adc_SDO4_0));
 endmodule

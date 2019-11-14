@@ -161,11 +161,13 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set adc_clk [ create_bd_port -dir O -type clk adc_clk ]
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {32258063} \
- ] $adc_clk
-  set adc_data [ create_bd_port -dir I -from 7 -to 0 adc_data ]
+  set adc_CLKOUT_0 [ create_bd_port -dir I adc_CLKOUT_0 ]
+  set adc_CNV_0 [ create_bd_port -dir O adc_CNV_0 ]
+  set adc_SCK_0 [ create_bd_port -dir O adc_SCK_0 ]
+  set adc_SDO1_0 [ create_bd_port -dir I adc_SDO1_0 ]
+  set adc_SDO2_0 [ create_bd_port -dir I adc_SDO2_0 ]
+  set adc_SDO3_0 [ create_bd_port -dir I adc_SDO3_0 ]
+  set adc_SDO4_0 [ create_bd_port -dir I adc_SDO4_0 ]
 
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
@@ -208,7 +210,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {142.857132} \
-   CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {32.258064} \
+   CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {33.333336} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_I2C_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
@@ -250,7 +252,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CAN_PERIPHERAL_VALID {0} \
    CONFIG.PCW_CLK0_FREQ {100000000} \
    CONFIG.PCW_CLK1_FREQ {142857132} \
-   CONFIG.PCW_CLK2_FREQ {32258063} \
+   CONFIG.PCW_CLK2_FREQ {33333336} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
    CONFIG.PCW_CORE0_FIQ_INTR {0} \
    CONFIG.PCW_CORE0_IRQ_INTR {0} \
@@ -378,7 +380,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {7} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK2_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {31} \
+   CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {30} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK3_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} \
@@ -389,7 +391,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
    CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {142} \
-   CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {32} \
+   CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {33} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
    CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
@@ -738,7 +740,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_1 {-0.001} \
    CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_2 {0.004} \
    CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_3 {-0.035} \
-   CONFIG.PCW_PACKAGE_NAME {clg485} \
+   CONFIG.PCW_PACKAGE_NAME {clg484} \
    CONFIG.PCW_PCAP_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} \
    CONFIG.PCW_PCAP_PERIPHERAL_FREQMHZ {200} \
@@ -1032,12 +1034,18 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net ARESETN_1 [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins rst_ps7_0_142M/interconnect_aresetn]
-  connect_bd_net -net adc_data_0_1 [get_bd_ports adc_data]
+  connect_bd_net -net adc_CLKOUT_0_1 [get_bd_ports adc_CLKOUT_0] [get_bd_pins ltc2324_0/adc_CLKOUT]
+  connect_bd_net -net adc_SDO1_0_1 [get_bd_ports adc_SDO1_0] [get_bd_pins ltc2324_0/adc_SDO1]
+  connect_bd_net -net adc_SDO2_0_1 [get_bd_ports adc_SDO2_0] [get_bd_pins ltc2324_0/adc_SDO2]
+  connect_bd_net -net adc_SDO3_0_1 [get_bd_ports adc_SDO3_0] [get_bd_pins ltc2324_0/adc_SDO3]
+  connect_bd_net -net adc_SDO4_0_1 [get_bd_ports adc_SDO4_0] [get_bd_pins ltc2324_0/adc_SDO4]
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net ltc2324_0_adc_CNV [get_bd_ports adc_CNV_0] [get_bd_pins ltc2324_0/adc_CNV]
+  connect_bd_net -net ltc2324_0_adc_SCK [get_bd_ports adc_SCK_0] [get_bd_pins ltc2324_0/adc_SCK]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins ltc2324_0/adc_rst_n] [get_bd_pins rst_clk_33M_0/peripheral_aresetn]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins ltc2324_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axis_register_slice_0/aclk] [get_bd_pins ltc2324_0/m00_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_142M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_ports adc_clk] [get_bd_pins ltc2324_0/adc_clk] [get_bd_pins processing_system7_0/FCLK_CLK2] [get_bd_pins rst_clk_33M_0/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins ltc2324_0/adc_clk] [get_bd_pins processing_system7_0/FCLK_CLK2] [get_bd_pins rst_clk_33M_0/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_clk_33M_0/ext_reset_in] [get_bd_pins rst_ps7_0_100M/ext_reset_in] [get_bd_pins rst_ps7_0_142M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins ltc2324_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
