@@ -47,17 +47,23 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:ad9280_sample:1.0
-// IP Revision: 15
+// IP VLNV: xilinx.com:user:AXI_DMA_LTC2324_16:1.0
+// IP Revision: 1
 
 (* X_CORE_INFO = "ad9280_sample_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_ad9280_sample_0_0,ad9280_sample_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_ad9280_sample_0_0,ad9280_sample_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ad9280_sample,x_ipVersion=1.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "design_1_ad9280_sample_0_0,ad9280_sample_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=AXI_DMA_LTC2324_16,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_ad9280_sample_0_0 (
   adc_clk,
   adc_rst_n,
-  adc_data,
+  adc_CNV,
+  adc_SCK,
+  adc_CLKOUT,
+  adc_SDO1,
+  adc_SDO2,
+  adc_SDO3,
+  adc_SDO4,
   m00_axis_tdata,
   m00_axis_tkeep,
   m00_axis_tlast,
@@ -94,7 +100,13 @@ input wire adc_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME adc_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 adc_rst_n RST" *)
 input wire adc_rst_n;
-input wire [7 : 0] adc_data;
+output wire adc_CNV;
+output wire adc_SCK;
+input wire adc_CLKOUT;
+input wire adc_SDO1;
+input wire adc_SDO2;
+input wire adc_SDO3;
+input wire adc_SDO4;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *)
 output wire [7 : 0] m00_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M00_AXIS TKEEP" *)
@@ -165,7 +177,13 @@ input wire s00_axi_aresetn;
   ) inst (
     .adc_clk(adc_clk),
     .adc_rst_n(adc_rst_n),
-    .adc_data(adc_data),
+    .adc_CNV(adc_CNV),
+    .adc_SCK(adc_SCK),
+    .adc_CLKOUT(adc_CLKOUT),
+    .adc_SDO1(adc_SDO1),
+    .adc_SDO2(adc_SDO2),
+    .adc_SDO3(adc_SDO3),
+    .adc_SDO4(adc_SDO4),
     .m00_axis_tdata(m00_axis_tdata),
     .m00_axis_tkeep(m00_axis_tkeep),
     .m00_axis_tlast(m00_axis_tlast),

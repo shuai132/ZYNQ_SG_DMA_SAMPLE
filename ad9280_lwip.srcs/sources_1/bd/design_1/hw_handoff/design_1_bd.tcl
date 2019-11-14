@@ -168,7 +168,7 @@ proc create_root_design { parentCell } {
   set adc_data [ create_bd_port -dir I -from 7 -to 0 adc_data ]
 
   # Create instance: ad9280_sample_0, and set properties
-  set ad9280_sample_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:ad9280_sample:1.0 ad9280_sample_0 ]
+  set ad9280_sample_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:AXI_DMA_LTC2324_16:1.0 ad9280_sample_0 ]
 
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
@@ -1032,7 +1032,7 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net ARESETN_1 [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins rst_ps7_0_142M/interconnect_aresetn]
-  connect_bd_net -net adc_data_0_1 [get_bd_ports adc_data] [get_bd_pins ad9280_sample_0/adc_data]
+  connect_bd_net -net adc_data_0_1 [get_bd_ports adc_data]
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins ad9280_sample_0/adc_rst_n] [get_bd_pins rst_clk_32M_0/peripheral_aresetn]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins ad9280_sample_0/s00_axi_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]

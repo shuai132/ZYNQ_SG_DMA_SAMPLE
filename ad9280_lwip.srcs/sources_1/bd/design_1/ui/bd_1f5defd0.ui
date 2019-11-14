@@ -2,44 +2,44 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2730 -y 540 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2730 -y 560 -defaultsOSRD
-preplace port adc_clk -pg 1 -lvl 8 -x 2730 -y 680 -defaultsOSRD
-preplace portBus adc_data -pg 1 -lvl 0 -x -20 -y 450 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2460 -y 620 -defaultsOSRD
-preplace inst ad9280_sample_0 -pg 1 -lvl 3 -x 1040 -y 350 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1690 -y 270 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 6 -x 2060 -y 330 -defaultsOSRD
-preplace inst axis_register_slice_0 -pg 1 -lvl 4 -x 1350 -y 570 -defaultsOSRD
-preplace inst rst_clk_32M_0 -pg 1 -lvl 2 -x 630 -y 600 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 630 -y 130 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 550 -defaultsOSRD
-preplace inst rst_ps7_0_142M -pg 1 -lvl 2 -x 630 -y 350 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2060 -y 660 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 7 430 460 830 220 1220 220 1500 160 1910 500 2220 770 2680
-preplace netloc xlconcat_0_dout 1 6 1 NJ 660
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 10 440 410 490 NJ 490 NJ 490 NJ 490 NJ 490 2210J 470 2700
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 0 430 390 470 880 480 1200J 470 1490 470 1870J 510 2210 760 2690
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 4 400 480 820 200 NJ 200 1470
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 380 90n
-preplace netloc rst_ps7_0_142M_peripheral_aresetn 1 2 4 870 510 1230 460 NJ 460 1900
-preplace netloc processing_system7_0_FCLK_CLK2 1 1 7 430 700 850 780 NJ 780 NJ 780 NJ 780 NJ 780 2710
-preplace netloc adc_data_0_1 1 0 3 NJ 450 NJ 450 840J
-preplace netloc ARESETN_1 1 2 4 810 210 NJ 210 1460J 380 1890J
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 1 860 320n
-preplace netloc axi_dma_0_s2mm_introut 1 5 1 1880 300n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 420 500 NJ 500 1240J 480 NJ 480 NJ 480 NJ 480 2680
-preplace netloc axi_interconnect_0_M00_AXI 1 6 1 2230 330n
-preplace netloc ad9280_sample_0_M00_AXIS 1 3 1 1210 350n
-preplace netloc axis_register_slice_0_M_AXIS 1 4 1 1480 240n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 N 260
-preplace netloc axi_dma_0_M_AXI_SG 1 5 1 N 240
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 870 190 NJ 190 1510J
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 860 140n
-preplace netloc processing_system7_0_DDR 1 7 1 NJ 540
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 560
-levelinfo -pg 1 -20 200 630 1040 1350 1690 2060 2460 2730
-pagesize -pg 1 -db -bbox -sgen -170 -10 2850 790
+preplace port DDR -pg 1 -lvl 8 -x 2630 -y 820 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2630 -y 840 -defaultsOSRD
+preplace port adc_clk -pg 1 -lvl 8 -x 2630 -y 960 -defaultsOSRD
+preplace portBus adc_data -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2370 -y 900 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1630 -y 550 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 6 -x 1980 -y 610 -defaultsOSRD
+preplace inst axis_register_slice_0 -pg 1 -lvl 4 -x 1320 -y 300 -defaultsOSRD
+preplace inst rst_clk_32M_0 -pg 1 -lvl 2 -x 620 -y 630 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 620 -y 180 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 120 -defaultsOSRD
+preplace inst rst_ps7_0_142M -pg 1 -lvl 2 -x 620 -y 400 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 1980 -y 940 -defaultsOSRD
+preplace inst ltc2324_0 -pg 1 -lvl 3 -x 1030 -y 300 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 7 430 510 820 480 1200 520 1440 440 1820 780 2150 750 2610
+preplace netloc xlconcat_0_dout 1 6 1 NJ 940
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 30 20 400 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 2590
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 10 410 520 850 510 NJ 510 1430 770 NJ 770 2130 1040 2600
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 4 390 530 870 600 NJ 600 NJ
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 N 140
+preplace netloc rst_ps7_0_142M_peripheral_aresetn 1 2 4 860 490 1210 660 NJ 660 1830
+preplace netloc processing_system7_0_FCLK_CLK2 1 1 7 440 500 800 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 2610
+preplace netloc adc_data_0_1 1 0 1 N 20
+preplace netloc ARESETN_1 1 2 4 840 470 1190J 220 NJ 220 1830J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 1 810 230n
+preplace netloc axi_dma_0_s2mm_introut 1 5 1 1810 580n
+preplace netloc axi_interconnect_0_M00_AXI 1 6 1 2140 610n
+preplace netloc ad9280_sample_0_M00_AXIS 1 3 1 N 280
+preplace netloc axis_register_slice_0_M_AXIS 1 4 1 1450 300n
+preplace netloc axi_dma_0_M_AXI_SG 1 5 1 N 520
+preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 N 540
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 830 500 NJ 500 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 190
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 420 760 NJ 760 NJ 760 NJ 760 NJ 760 NJ 760 2600
+preplace netloc processing_system7_0_DDR 1 7 1 NJ 820
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 840
+levelinfo -pg 1 0 210 620 1030 1320 1630 1980 2370 2630
+pagesize -pg 1 -db -bbox -sgen -150 0 2750 1070
 "
 }
 {

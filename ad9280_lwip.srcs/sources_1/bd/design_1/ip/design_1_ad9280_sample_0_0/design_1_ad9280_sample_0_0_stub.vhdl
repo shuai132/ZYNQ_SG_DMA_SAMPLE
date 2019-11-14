@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Tue Jul  2 22:53:57 2019
--- Host        : localhost running 64-bit Ubuntu 18.04.2 LTS
+-- Date        : Thu Nov 14 17:31:34 2019
+-- Host        : localhost running 64-bit Ubuntu 18.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/parallels/nfs/zynq_proj/25_ad9280_lwip/ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_ad9280_sample_0_0/design_1_ad9280_sample_0_0_stub.vhdl
 -- Design      : design_1_ad9280_sample_0_0
@@ -16,7 +16,13 @@ entity design_1_ad9280_sample_0_0 is
   Port ( 
     adc_clk : in STD_LOGIC;
     adc_rst_n : in STD_LOGIC;
-    adc_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    adc_CNV : out STD_LOGIC;
+    adc_SCK : out STD_LOGIC;
+    adc_CLKOUT : in STD_LOGIC;
+    adc_SDO1 : in STD_LOGIC;
+    adc_SDO2 : in STD_LOGIC;
+    adc_SDO3 : in STD_LOGIC;
+    adc_SDO4 : in STD_LOGIC;
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m00_axis_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
     m00_axis_tlast : out STD_LOGIC;
@@ -53,7 +59,7 @@ architecture stub of design_1_ad9280_sample_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "adc_clk,adc_rst_n,adc_data[7:0],m00_axis_tdata[7:0],m00_axis_tkeep[0:0],m00_axis_tlast,m00_axis_tready,m00_axis_tvalid,m00_axis_aresetn[0:0],m00_axis_aclk,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn";
+attribute black_box_pad_pin of stub : architecture is "adc_clk,adc_rst_n,adc_CNV,adc_SCK,adc_CLKOUT,adc_SDO1,adc_SDO2,adc_SDO3,adc_SDO4,m00_axis_tdata[7:0],m00_axis_tkeep[0:0],m00_axis_tlast,m00_axis_tready,m00_axis_tvalid,m00_axis_aresetn[0:0],m00_axis_aclk,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "ad9280_sample_v1_0,Vivado 2019.1";
 begin
