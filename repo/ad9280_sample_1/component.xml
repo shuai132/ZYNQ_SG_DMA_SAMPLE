@@ -409,7 +409,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5e223b13</spirit:value>
+            <spirit:value>b1d33bfd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -428,7 +428,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5e223b13</spirit:value>
+            <spirit:value>b1d33bfd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1220,11 +1220,11 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXI_DMA_LTC2324_16_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:ad9280_sample:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2019-11-14T10:07:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-11-15T04:49:22Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:ad9280_sample:1.0_ARCHIVE_LOCATION">d:/intel_project/AX7015/new/11_ad_vdma_hdmi_out_v3.00/repo/ad9280_sample_1</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6bbcad06_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
@@ -1302,13 +1302,134 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6f21a9d4_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@55d32b19_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@555e55fa_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26608b66_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55bb4b69_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c230343_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d1c7a51_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ab29bf_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64c87ca8_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6015bc15_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5342b1a4_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f372a36_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d51ade_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74254b45_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201f930b_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@409325a8_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b2c0f32_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66020398_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62adda38_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a6d7cb_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a38e60c_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10a29140_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@371fe50c_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@460e5bf_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65c5f712_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b46d70a_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60400566_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b7e3ac_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a0648ee_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2742f334_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@696babbf_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8100dd3_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ce2786_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25e944e5_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c60aff3_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77cb9fcf_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@588ca3f3_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78100ed4_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7043c19b_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b87794d_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@269d5213_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f36ccc1_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b567b8a_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69c0abfd_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5566396b_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@270ca2e2_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@306958fc_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dcc6560_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674077a7_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29d60666_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12ee9b7a_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4848c4c9_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@614c8fae_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1defe1e_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7971e976_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13844847_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74863505_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fd90e34_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13f6b0ee_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3419dd78_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73ef2c39_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@457d14bc_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d5baf18_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@604d3ba8_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@406e128b_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f1b3c27_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6187e955_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25823ee3_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef69308_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a8e9db_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17920397_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10bb99a4_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10692a8_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@213921cf_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c4c86_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22192471_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e48f9a0_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54795325_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@441d038b_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63fef76d_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@526a7cf2_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1068d7bc_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58757faa_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a92489a_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eff3492_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a847dae_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@487b55b2_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a9a8b8_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33326601_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28565009_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6746d6fa_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e8fa888_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35e1fffd_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61976cf5_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49ef9c02_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e576b7_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d59a0fc_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e314ad_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef76533_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c691340_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c65903f_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a5f937_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6931a570_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c0aaa01_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48731dbf_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44516611_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3644c47a_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dd44b7b_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6872640_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534d3179_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@570a21be_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53cd9dc1_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75de797d_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f6ed20_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c49309_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50cbeb19_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba2e321_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dbd2798_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54f24e49_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7124b6af_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e6bad7c_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc4557c_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e3990a6_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1443581c_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="fc1bb160"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="44688394"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a88699c6"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="89d3132e"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="4f5f0863"/>

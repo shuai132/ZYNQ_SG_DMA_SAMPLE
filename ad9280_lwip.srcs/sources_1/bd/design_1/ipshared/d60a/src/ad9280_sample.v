@@ -44,8 +44,8 @@ localparam          S_IDLE      = 0;
 localparam          S_SAMPLE    = 1;
 
 // 这个axis ip核的数据位宽是8位，但是我们传输一次4个通道ADC数据每个16位，总共64位。分8次传送。
-reg[2:0]            write_cnt;
-localparam          write_num   = 3'd7;
+reg[2+3:0]          write_cnt;
+localparam          write_num   = 4'd8;
 
 // ADC
 wire                adc_valid;
@@ -55,6 +55,8 @@ wire[15:0]          adc_ch3;
 wire[15:0]          adc_ch4;
 wire[63:0]          adc_data;
 assign              adc_data = {adc_ch1, adc_ch2, adc_ch3, adc_ch4};
+
+reg                 adc_valid_flag;
 
 always@(posedge adc_clk or negedge adc_rst_n)
 begin
@@ -88,20 +90,33 @@ begin
                 st_clr     <= 1'b0;
                 fifo_din   <= 1'b0;
                 write_cnt  <= 1'b0;
+                adc_valid_flag <= 1'b0;
             end
             else
             begin
-                // arm是小端模式 这里也把高位字节放到前面 方便解析
-                fifo_din   <= adc_data << write_cnt;
-                fifo_wr_en <= 1'b1;
+                if (adc_valid)
+                    adc_valid_flag <= 1'b1;
 
-                if (write_cnt == write_num)
-                begin
-                    write_cnt  <= 1'b0;
-                    sample_cnt <= sample_cnt + 32'd1;
+                // adc_valid高电平时进行读取adc数据
+                // 已知持续时间大于8个时钟 可分八次传送
+                // adc_valid_flag是为了把valid信号延长至少读取完8个字节
+                if (adc_valid || adc_valid_flag) begin
+                    fifo_wr_en <= 1'b1;
+
+                    // arm是小端模式 这里也把高位字节放到前面 方便解析
+                    fifo_din <= adc_data >> (write_cnt << 3);
+                    // fifo_din <= adc_data >> (64 - 8 - (write_cnt << 3));
+
+                    if (write_cnt == write_num)
+                    begin
+                        write_cnt  <= 1'b0;
+                        fifo_wr_en <= 1'b0;
+                        sample_cnt <= sample_cnt + 32'd1;
+                        adc_valid_flag <= 1'b0;
+                    end
+                    else
+                        write_cnt  <= write_cnt + 1'b1;
                 end
-                else
-                    write_cnt  <= write_cnt + 1'b1;
             end
         end
         default:
@@ -122,7 +137,7 @@ LTC2324_16 LTC2324_16_inst
     .SDO3       (adc_SDO3),
     .SDO4       (adc_SDO4),
 
-    .sample_en  (sample_start),
+    .sample_en  ((state == S_SAMPLE) && (sample_cnt != sample_len)),
 
     .valid      (adc_valid),
     .ch1        (adc_ch1),

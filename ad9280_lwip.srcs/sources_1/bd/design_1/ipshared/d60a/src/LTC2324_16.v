@@ -152,10 +152,10 @@ begin
     end
     else if (tsck_clk_cnt < tsck_clk_all)
     begin
-        ch1 <= (ch1 << 1'b1) + 1;
-        ch2 <= (ch2 << 1'b1) + 2;
-        ch3 <= (ch3 << 1'b1) + 3;
-        ch4 <= (ch4 << 1'b1) + SDO4;
+        ch1 <= 16'h1234;
+        ch2 <= ch2 + 1;
+        ch3 <= (ch3 << 1'b1) + 1;
+        ch4 <= 16'h5678;
     end
 end
 
