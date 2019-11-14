@@ -1,4 +1,4 @@
-module ad9280_sample(
+module AXI_DMA_LTC2324_16(
     input               adc_clk,
     input               adc_rst_n,
 
