@@ -409,7 +409,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9cde9e05</spirit:value>
+            <spirit:value>1d2bd889</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -428,7 +428,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9cde9e05</spirit:value>
+            <spirit:value>1d2bd889</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1212,11 +1212,11 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXI_DMA_LTC2324_16_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:ad9280_sample:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2019-11-14T09:29:50Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-11-14T09:51:26Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:ad9280_sample:1.0_ARCHIVE_LOCATION">d:/intel_project/AX7015/new/11_ad_vdma_hdmi_out_v3.00/repo/ad9280_sample_1</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6bbcad06_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
@@ -1256,13 +1256,25 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6eefe603_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@bb72545_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@10270964_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fafcec0_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66dcfd24_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cdd0c0e_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@726ce73a_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f534d75_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201fe4e3_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8ac7c0_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72b6af13_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b2f46c_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d4b643_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@543a95e4_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a33cbc1_ARCHIVE_LOCATION">/home/parallels/nfs/zynq_proj/25_ad9280_lwip/repo/ad9280_sample_1</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="fc1bb160"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="180a1505"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="95eaa2c7"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="89d3132e"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="4f5f0863"/>

@@ -78,6 +78,7 @@ begin
                 state      <= S_IDLE;
                 st_clr     <= 1'b0;
                 fifo_din   <= 1'b0;
+                write_cnt  <= 1'b0;
             end
             else
             begin

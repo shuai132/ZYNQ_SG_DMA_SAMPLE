@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Thu Nov 14 17:31:35 2019
+-- Date        : Thu Nov 14 17:53:28 2019
 -- Host        : localhost running 64-bit Ubuntu 18.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/parallels/nfs/zynq_proj/25_ad9280_lwip/ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_ad9280_sample_0_0/design_1_ad9280_sample_0_0_sim_netlist.vhdl
@@ -7248,13 +7248,11 @@ architecture STRUCTURE of design_1_ad9280_sample_0_0_ad9280_sample is
   signal state0_carry_n_3 : STD_LOGIC;
   signal tvalid_en : STD_LOGIC;
   signal tvalid_en_i_1_n_0 : STD_LOGIC;
+  signal write_cnt : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \write_cnt[0]_i_1_n_0\ : STD_LOGIC;
   signal \write_cnt[1]_i_1_n_0\ : STD_LOGIC;
   signal \write_cnt[2]_i_1_n_0\ : STD_LOGIC;
   signal \write_cnt[2]_i_2_n_0\ : STD_LOGIC;
-  signal \write_cnt_reg_n_0_[0]\ : STD_LOGIC;
-  signal \write_cnt_reg_n_0_[1]\ : STD_LOGIC;
-  signal \write_cnt_reg_n_0_[2]\ : STD_LOGIC;
   signal NLW_DMA_AXIS_tlast0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DMA_AXIS_tlast0_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DMA_AXIS_tlast0_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
@@ -7282,30 +7280,30 @@ architecture STRUCTURE of design_1_ad9280_sample_0_0_ad9280_sample is
   attribute x_core_info of afifo_inst : label is "fifo_generator_v13_2_4,Vivado 2019.1";
   attribute SOFT_HLUTNM of afifo_inst_i_2 : label is "soft_lutpair35";
   attribute SOFT_HLUTNM of \dma_cnt[0]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \dma_cnt[10]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \dma_cnt[11]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \dma_cnt[12]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \dma_cnt[13]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \dma_cnt[14]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \dma_cnt[15]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \dma_cnt[16]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \dma_cnt[17]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \dma_cnt[18]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \dma_cnt[19]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dma_cnt[10]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \dma_cnt[11]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \dma_cnt[12]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \dma_cnt[13]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \dma_cnt[14]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \dma_cnt[15]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \dma_cnt[16]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \dma_cnt[17]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dma_cnt[18]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dma_cnt[19]_i_1\ : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \dma_cnt[1]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \dma_cnt[20]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \dma_cnt[21]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \dma_cnt[22]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \dma_cnt[23]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dma_cnt[20]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \dma_cnt[21]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dma_cnt[22]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dma_cnt[23]_i_1\ : label is "soft_lutpair20";
   attribute SOFT_HLUTNM of \dma_cnt[24]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \dma_cnt[25]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \dma_cnt[25]_i_1\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \dma_cnt[26]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \dma_cnt[27]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \dma_cnt[27]_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \dma_cnt[28]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \dma_cnt[29]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \dma_cnt[29]_i_1\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \dma_cnt[2]_i_1\ : label is "soft_lutpair31";
   attribute SOFT_HLUTNM of \dma_cnt[30]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \dma_cnt[31]_i_2\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \dma_cnt[31]_i_2\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \dma_cnt[3]_i_1\ : label is "soft_lutpair31";
   attribute SOFT_HLUTNM of \dma_cnt[4]_i_1\ : label is "soft_lutpair30";
   attribute SOFT_HLUTNM of \dma_cnt[5]_i_1\ : label is "soft_lutpair30";
@@ -7315,13 +7313,13 @@ architecture STRUCTURE of design_1_ad9280_sample_0_0_ad9280_sample is
   attribute SOFT_HLUTNM of \dma_cnt[9]_i_1\ : label is "soft_lutpair28";
   attribute SOFT_HLUTNM of \fifo_din[0]_i_1\ : label is "soft_lutpair36";
   attribute SOFT_HLUTNM of \fifo_din[1]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \fifo_din[2]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of fifo_wr_en_i_1 : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of fifo_wr_en_i_1 : label is "soft_lutpair37";
   attribute SOFT_HLUTNM of m00_axis_tlast_INST_0 : label is "soft_lutpair32";
   attribute SOFT_HLUTNM of st_clr_i_1 : label is "soft_lutpair33";
   attribute SOFT_HLUTNM of tvalid_en_i_1 : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \write_cnt[1]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \write_cnt[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \write_cnt[0]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \write_cnt[1]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \write_cnt[2]_i_1\ : label is "soft_lutpair27";
 begin
   st_clr <= \^st_clr\;
 DMA_AXIS_tlast0_carry: unisim.vcomponents.CARRY4
@@ -8292,7 +8290,7 @@ afifo_inst_i_2: unisim.vcomponents.LUT2
       INIT => X"2"
     )
         port map (
-      I0 => \write_cnt_reg_n_0_[0]\,
+      I0 => write_cnt(0),
       I1 => state0,
       O => \fifo_din[0]_i_1_n_0\
     );
@@ -8301,7 +8299,7 @@ afifo_inst_i_2: unisim.vcomponents.LUT2
       INIT => X"2"
     )
         port map (
-      I0 => \write_cnt_reg_n_0_[1]\,
+      I0 => write_cnt(1),
       I1 => state0,
       O => \fifo_din[1]_i_1_n_0\
     );
@@ -8310,7 +8308,7 @@ afifo_inst_i_2: unisim.vcomponents.LUT2
       INIT => X"2"
     )
         port map (
-      I0 => \write_cnt_reg_n_0_[2]\,
+      I0 => write_cnt(2),
       I1 => state0,
       O => \fifo_din[2]_i_1_n_0\
     );
@@ -8379,9 +8377,9 @@ m00_axis_tlast_INST_0: unisim.vcomponents.LUT4
     )
         port map (
       I0 => fifo_din,
-      I1 => \write_cnt_reg_n_0_[1]\,
-      I2 => \write_cnt_reg_n_0_[0]\,
-      I3 => \write_cnt_reg_n_0_[2]\,
+      I1 => write_cnt(1),
+      I2 => write_cnt(0),
+      I3 => write_cnt(2),
       I4 => state0,
       O => sample_cnt
     );
@@ -9306,37 +9304,34 @@ tvalid_en_reg: unisim.vcomponents.FDCE
       D => tvalid_en_i_1_n_0,
       Q => tvalid_en
     );
-\write_cnt[0]_i_1\: unisim.vcomponents.LUT3
+\write_cnt[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"D2"
+      INIT => X"1"
     )
         port map (
-      I0 => fifo_din,
+      I0 => write_cnt(0),
       I1 => state0,
-      I2 => \write_cnt_reg_n_0_[0]\,
       O => \write_cnt[0]_i_1_n_0\
     );
-\write_cnt[1]_i_1\: unisim.vcomponents.LUT4
+\write_cnt[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F708"
+      INIT => X"06"
     )
         port map (
-      I0 => \write_cnt_reg_n_0_[0]\,
-      I1 => fifo_din,
+      I0 => write_cnt(1),
+      I1 => write_cnt(0),
       I2 => state0,
-      I3 => \write_cnt_reg_n_0_[1]\,
       O => \write_cnt[1]_i_1_n_0\
     );
-\write_cnt[2]_i_1\: unisim.vcomponents.LUT5
+\write_cnt[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FF7F0080"
+      INIT => X"0078"
     )
         port map (
-      I0 => \write_cnt_reg_n_0_[0]\,
-      I1 => \write_cnt_reg_n_0_[1]\,
-      I2 => fifo_din,
+      I0 => write_cnt(1),
+      I1 => write_cnt(0),
+      I2 => write_cnt(2),
       I3 => state0,
-      I4 => \write_cnt_reg_n_0_[2]\,
       O => \write_cnt[2]_i_1_n_0\
     );
 \write_cnt[2]_i_2\: unisim.vcomponents.LUT1
@@ -9350,26 +9345,26 @@ tvalid_en_reg: unisim.vcomponents.FDCE
 \write_cnt_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => '1',
+      CE => fifo_din,
       CLR => \write_cnt[2]_i_2_n_0\,
       D => \write_cnt[0]_i_1_n_0\,
-      Q => \write_cnt_reg_n_0_[0]\
+      Q => write_cnt(0)
     );
 \write_cnt_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => '1',
+      CE => fifo_din,
       CLR => \write_cnt[2]_i_2_n_0\,
       D => \write_cnt[1]_i_1_n_0\,
-      Q => \write_cnt_reg_n_0_[1]\
+      Q => write_cnt(1)
     );
 \write_cnt_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => adc_clk,
-      CE => '1',
+      CE => fifo_din,
       CLR => \write_cnt[2]_i_2_n_0\,
       D => \write_cnt[2]_i_1_n_0\,
-      Q => \write_cnt_reg_n_0_[2]\
+      Q => write_cnt(2)
     );
 end STRUCTURE;
 library IEEE;

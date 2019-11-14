@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:AXI_DMA_LTC2324_16:1.0
-// IP Revision: 1
+// IP Revision: 3
 
 `timescale 1ns/1ps
 

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Thu Nov 14 17:30:13 2019
+//Date        : Thu Nov 14 17:51:51 2019
 //Host        : localhost running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -260,42 +260,6 @@ module design_1
 
   assign adc_clk = processing_system7_0_FCLK_CLK2;
   assign adc_data_0_1 = adc_data[7:0];
-  design_1_ad9280_sample_0_0 ad9280_sample_0
-       (.adc_CLKOUT(1'b0),
-        .adc_SDO1(1'b0),
-        .adc_SDO2(1'b0),
-        .adc_SDO3(1'b0),
-        .adc_SDO4(1'b0),
-        .adc_clk(processing_system7_0_FCLK_CLK2),
-        .adc_rst_n(proc_sys_reset_0_peripheral_aresetn),
-        .m00_axis_aclk(processing_system7_0_FCLK_CLK1),
-        .m00_axis_aresetn(rst_ps7_0_142M_peripheral_aresetn),
-        .m00_axis_tdata(ad9280_sample_0_M00_AXIS_TDATA),
-        .m00_axis_tkeep(ad9280_sample_0_M00_AXIS_TKEEP),
-        .m00_axis_tlast(ad9280_sample_0_M00_AXIS_TLAST),
-        .m00_axis_tready(ad9280_sample_0_M00_AXIS_TREADY),
-        .m00_axis_tvalid(ad9280_sample_0_M00_AXIS_TVALID),
-        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s00_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[3:0]),
-        .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s00_axi_arprot(ps7_0_axi_periph_M01_AXI_ARPROT),
-        .s00_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
-        .s00_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
-        .s00_axi_awaddr(ps7_0_axi_periph_M01_AXI_AWADDR[3:0]),
-        .s00_axi_awprot(ps7_0_axi_periph_M01_AXI_AWPROT),
-        .s00_axi_awready(ps7_0_axi_periph_M01_AXI_AWREADY),
-        .s00_axi_awvalid(ps7_0_axi_periph_M01_AXI_AWVALID),
-        .s00_axi_bready(ps7_0_axi_periph_M01_AXI_BREADY),
-        .s00_axi_bresp(ps7_0_axi_periph_M01_AXI_BRESP),
-        .s00_axi_bvalid(ps7_0_axi_periph_M01_AXI_BVALID),
-        .s00_axi_rdata(ps7_0_axi_periph_M01_AXI_RDATA),
-        .s00_axi_rready(ps7_0_axi_periph_M01_AXI_RREADY),
-        .s00_axi_rresp(ps7_0_axi_periph_M01_AXI_RRESP),
-        .s00_axi_rvalid(ps7_0_axi_periph_M01_AXI_RVALID),
-        .s00_axi_wdata(ps7_0_axi_periph_M01_AXI_WDATA),
-        .s00_axi_wready(ps7_0_axi_periph_M01_AXI_WREADY),
-        .s00_axi_wstrb(ps7_0_axi_periph_M01_AXI_WSTRB),
-        .s00_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID));
   design_1_axi_dma_0_1 axi_dma_0
        (.axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_s2mm_aclk(processing_system7_0_FCLK_CLK1),
@@ -473,6 +437,42 @@ module design_1
         .s_axis_tlast(ad9280_sample_0_M00_AXIS_TLAST),
         .s_axis_tready(ad9280_sample_0_M00_AXIS_TREADY),
         .s_axis_tvalid(ad9280_sample_0_M00_AXIS_TVALID));
+  design_1_ad9280_sample_0_0 ltc2324_0
+       (.adc_CLKOUT(1'b0),
+        .adc_SDO1(1'b0),
+        .adc_SDO2(1'b0),
+        .adc_SDO3(1'b0),
+        .adc_SDO4(1'b0),
+        .adc_clk(processing_system7_0_FCLK_CLK2),
+        .adc_rst_n(proc_sys_reset_0_peripheral_aresetn),
+        .m00_axis_aclk(processing_system7_0_FCLK_CLK1),
+        .m00_axis_aresetn(rst_ps7_0_142M_peripheral_aresetn),
+        .m00_axis_tdata(ad9280_sample_0_M00_AXIS_TDATA),
+        .m00_axis_tkeep(ad9280_sample_0_M00_AXIS_TKEEP),
+        .m00_axis_tlast(ad9280_sample_0_M00_AXIS_TLAST),
+        .m00_axis_tready(ad9280_sample_0_M00_AXIS_TREADY),
+        .m00_axis_tvalid(ad9280_sample_0_M00_AXIS_TVALID),
+        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s00_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[3:0]),
+        .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s00_axi_arprot(ps7_0_axi_periph_M01_AXI_ARPROT),
+        .s00_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
+        .s00_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
+        .s00_axi_awaddr(ps7_0_axi_periph_M01_AXI_AWADDR[3:0]),
+        .s00_axi_awprot(ps7_0_axi_periph_M01_AXI_AWPROT),
+        .s00_axi_awready(ps7_0_axi_periph_M01_AXI_AWREADY),
+        .s00_axi_awvalid(ps7_0_axi_periph_M01_AXI_AWVALID),
+        .s00_axi_bready(ps7_0_axi_periph_M01_AXI_BREADY),
+        .s00_axi_bresp(ps7_0_axi_periph_M01_AXI_BRESP),
+        .s00_axi_bvalid(ps7_0_axi_periph_M01_AXI_BVALID),
+        .s00_axi_rdata(ps7_0_axi_periph_M01_AXI_RDATA),
+        .s00_axi_rready(ps7_0_axi_periph_M01_AXI_RREADY),
+        .s00_axi_rresp(ps7_0_axi_periph_M01_AXI_RRESP),
+        .s00_axi_rvalid(ps7_0_axi_periph_M01_AXI_RVALID),
+        .s00_axi_wdata(ps7_0_axi_periph_M01_AXI_WDATA),
+        .s00_axi_wready(ps7_0_axi_periph_M01_AXI_WREADY),
+        .s00_axi_wstrb(ps7_0_axi_periph_M01_AXI_WSTRB),
+        .s00_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -665,7 +665,7 @@ module design_1
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
-  design_1_proc_sys_reset_0_0 rst_clk_32M_0
+  design_1_proc_sys_reset_0_0 rst_clk_33M_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
         .ext_reset_in(processing_system7_0_FCLK_RESET0_N),

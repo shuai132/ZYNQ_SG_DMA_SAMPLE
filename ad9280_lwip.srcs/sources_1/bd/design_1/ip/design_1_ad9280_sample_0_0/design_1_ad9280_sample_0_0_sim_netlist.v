@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Thu Nov 14 17:31:34 2019
+// Date        : Thu Nov 14 17:53:28 2019
 // Host        : localhost running 64-bit Ubuntu 18.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/parallels/nfs/zynq_proj/25_ad9280_lwip/ad9280_lwip.srcs/sources_1/bd/design_1/ip/design_1_ad9280_sample_0_0/design_1_ad9280_sample_0_0_sim_netlist.v
@@ -418,13 +418,11 @@ module design_1_ad9280_sample_0_0_ad9280_sample
   wire state0_carry_n_3;
   wire tvalid_en;
   wire tvalid_en_i_1_n_0;
+  wire [2:0]write_cnt;
   wire \write_cnt[0]_i_1_n_0 ;
   wire \write_cnt[1]_i_1_n_0 ;
   wire \write_cnt[2]_i_1_n_0 ;
   wire \write_cnt[2]_i_2_n_0 ;
-  wire \write_cnt_reg_n_0_[0] ;
-  wire \write_cnt_reg_n_0_[1] ;
-  wire \write_cnt_reg_n_0_[2] ;
   wire [3:0]NLW_DMA_AXIS_tlast0_carry_O_UNCONNECTED;
   wire [3:0]NLW_DMA_AXIS_tlast0_carry__0_O_UNCONNECTED;
   wire [3:3]NLW_DMA_AXIS_tlast0_carry__1_CO_UNCONNECTED;
@@ -628,7 +626,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt[0]),
         .O(p_1_in));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[10]_i_1 
@@ -637,7 +635,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[10]),
         .O(\dma_cnt[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[11]_i_1 
@@ -646,7 +644,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[11]),
         .O(\dma_cnt[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[12]_i_1 
@@ -655,7 +653,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[12]),
         .O(\dma_cnt[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[13]_i_1 
@@ -664,7 +662,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[13]),
         .O(\dma_cnt[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[14]_i_1 
@@ -673,7 +671,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[14]),
         .O(\dma_cnt[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[15]_i_1 
@@ -682,7 +680,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[15]),
         .O(\dma_cnt[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[16]_i_1 
@@ -691,7 +689,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[16]),
         .O(\dma_cnt[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[17]_i_1 
@@ -700,7 +698,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[17]),
         .O(\dma_cnt[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[18]_i_1 
@@ -709,7 +707,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[18]),
         .O(\dma_cnt[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[19]_i_1 
@@ -727,7 +725,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[1]),
         .O(\dma_cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[20]_i_1 
@@ -736,7 +734,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[20]),
         .O(\dma_cnt[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[21]_i_1 
@@ -745,7 +743,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[21]),
         .O(\dma_cnt[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[22]_i_1 
@@ -754,7 +752,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[22]),
         .O(\dma_cnt[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[23]_i_1 
@@ -772,7 +770,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[24]),
         .O(\dma_cnt[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[25]_i_1 
@@ -790,7 +788,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[26]),
         .O(\dma_cnt[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[27]_i_1 
@@ -808,7 +806,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I2(DMA_AXIS_tlast0),
         .I3(dma_cnt0[28]),
         .O(\dma_cnt[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[29]_i_1 
@@ -842,7 +840,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .I1(fifo_rd_en_d0),
         .I2(m00_axis_tready),
         .O(\dma_cnt[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h0E00)) 
     \dma_cnt[31]_i_2 
@@ -1166,21 +1164,20 @@ module design_1_ad9280_sample_0_0_ad9280_sample
   LUT2 #(
     .INIT(4'h2)) 
     \fifo_din[0]_i_1 
-       (.I0(\write_cnt_reg_n_0_[0] ),
+       (.I0(write_cnt[0]),
         .I1(state0),
         .O(\fifo_din[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \fifo_din[1]_i_1 
-       (.I0(\write_cnt_reg_n_0_[1] ),
+       (.I0(write_cnt[1]),
         .I1(state0),
         .O(\fifo_din[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \fifo_din[2]_i_1 
-       (.I0(\write_cnt_reg_n_0_[2] ),
+       (.I0(write_cnt[2]),
         .I1(state0),
         .O(\fifo_din[2]_i_1_n_0 ));
   FDCE \fifo_din_reg[0] 
@@ -1207,7 +1204,7 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .CLR(afifo_inst_i_1_n_0),
         .D(fifo_rd_en),
         .Q(fifo_rd_en_d0));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT1 #(
     .INIT(2'h1)) 
     fifo_wr_en_i_1
@@ -1232,9 +1229,9 @@ module design_1_ad9280_sample_0_0_ad9280_sample
     .INIT(32'hAAAA8000)) 
     \sample_cnt[0]_i_1 
        (.I0(fifo_din),
-        .I1(\write_cnt_reg_n_0_[1] ),
-        .I2(\write_cnt_reg_n_0_[0] ),
-        .I3(\write_cnt_reg_n_0_[2] ),
+        .I1(write_cnt[1]),
+        .I2(write_cnt[0]),
+        .I3(write_cnt[2]),
         .I4(state0),
         .O(sample_cnt));
   LUT2 #(
@@ -1841,31 +1838,29 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .CLR(afifo_inst_i_1_n_0),
         .D(tvalid_en_i_1_n_0),
         .Q(tvalid_en));
-  LUT3 #(
-    .INIT(8'hD2)) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \write_cnt[0]_i_1 
-       (.I0(fifo_din),
+       (.I0(write_cnt[0]),
         .I1(state0),
-        .I2(\write_cnt_reg_n_0_[0] ),
         .O(\write_cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'hF708)) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'h06)) 
     \write_cnt[1]_i_1 
-       (.I0(\write_cnt_reg_n_0_[0] ),
-        .I1(fifo_din),
+       (.I0(write_cnt[1]),
+        .I1(write_cnt[0]),
         .I2(state0),
-        .I3(\write_cnt_reg_n_0_[1] ),
         .O(\write_cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT5 #(
-    .INIT(32'hFF7F0080)) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT4 #(
+    .INIT(16'h0078)) 
     \write_cnt[2]_i_1 
-       (.I0(\write_cnt_reg_n_0_[0] ),
-        .I1(\write_cnt_reg_n_0_[1] ),
-        .I2(fifo_din),
+       (.I0(write_cnt[1]),
+        .I1(write_cnt[0]),
+        .I2(write_cnt[2]),
         .I3(state0),
-        .I4(\write_cnt_reg_n_0_[2] ),
         .O(\write_cnt[2]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -1874,22 +1869,22 @@ module design_1_ad9280_sample_0_0_ad9280_sample
         .O(\write_cnt[2]_i_2_n_0 ));
   FDCE \write_cnt_reg[0] 
        (.C(adc_clk),
-        .CE(1'b1),
+        .CE(fifo_din),
         .CLR(\write_cnt[2]_i_2_n_0 ),
         .D(\write_cnt[0]_i_1_n_0 ),
-        .Q(\write_cnt_reg_n_0_[0] ));
+        .Q(write_cnt[0]));
   FDCE \write_cnt_reg[1] 
        (.C(adc_clk),
-        .CE(1'b1),
+        .CE(fifo_din),
         .CLR(\write_cnt[2]_i_2_n_0 ),
         .D(\write_cnt[1]_i_1_n_0 ),
-        .Q(\write_cnt_reg_n_0_[1] ));
+        .Q(write_cnt[1]));
   FDCE \write_cnt_reg[2] 
        (.C(adc_clk),
-        .CE(1'b1),
+        .CE(fifo_din),
         .CLR(\write_cnt[2]_i_2_n_0 ),
         .D(\write_cnt[2]_i_1_n_0 ),
-        .Q(\write_cnt_reg_n_0_[2] ));
+        .Q(write_cnt[2]));
 endmodule
 
 (* ORIG_REF_NAME = "ad9280_sample_v1_0" *) 
