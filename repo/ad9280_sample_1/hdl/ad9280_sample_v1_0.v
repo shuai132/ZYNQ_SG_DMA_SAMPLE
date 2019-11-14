@@ -17,7 +17,16 @@
 		// Users to add ports here
 		input                       adc_clk,
 		input                       adc_rst_n,
-	    input[7:0]                  adc_data,
+
+		// ADC
+        output                      adc_CNV,
+        output                      adc_SCK,
+        input                       adc_CLKOUT,
+        input                       adc_SDO1,
+        input                       adc_SDO2,
+        input                       adc_SDO3,
+        input                       adc_SDO4,
+
 		output [7:0]                m00_axis_tdata,
         output [0:0]                m00_axis_tkeep,
         output                      m00_axis_tlast,
@@ -59,7 +68,15 @@
 	) ad9280_sample_v1_0_S00_AXI_inst (
 	    .adc_clk          (adc_clk         ),
 	    .adc_rst_n        (adc_rst_n       ),
-	    .adc_data         (adc_data        ),
+	    
+    .adc_CNV              (adc_CNV          ), 
+    .adc_SCK              (adc_SCK          ), 
+    .adc_CLKOUT           (adc_CLKOUT       ), 
+    .adc_SDO1             (adc_SDO1         ), 
+    .adc_SDO2             (adc_SDO2         ), 
+    .adc_SDO3             (adc_SDO3         ), 
+    .adc_SDO4             (adc_SDO4         ), 
+    
 		.m00_axis_tdata   (m00_axis_tdata  ),
         .m00_axis_tkeep   (m00_axis_tkeep  ),
         .m00_axis_tlast   (m00_axis_tlast  ),
